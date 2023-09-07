@@ -1,6 +1,9 @@
-package it.paleocapa.labollita;
+package it.paleocapa.crisafullip;
 
 import org.junit.jupiter.api.Test;
+
+import it.itispaleocapa.crisafullip.CircoloPrivato;
+import it.itispaleocapa.crisafullip.Socio;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -24,12 +27,12 @@ public class AppTest {
 
     @Test
     public void testModificaSocio() {
-        Socio socio = new Socio("Samuele", "Labollita", 18, 'M');
+        Socio socio = new Socio("Pasquale", "Crisafulli", 18, 'M');
         circolo.aggiungiSocio(socio);
-        assertEquals(18, circolo.getSoci().get("SamueleLabollita").getEta());
+        assertEquals(18, circolo.getSoci().get("PasqualeCrisafulli").getEta());
 
         circolo.modificaSocio("Pasquale", "Crisafulli", 23, 'M');
-        assertEquals(20, circolo.getSoci().get("SamueleLabollita").getEta());
+        assertEquals(23, circolo.getSoci().get("PasqualeCrisafulli").getEta());
     }
 
     @Test
@@ -44,8 +47,8 @@ public class AppTest {
 
     @Test
     public void testCalcolaEtaMedia() {
-        Soci socio1 = new Soci("Pasquale", "Crisafulli", 18, 'M');
-        Soci socio2 = new Soci("Samuele", "Crisafulli", 12, 'M');
+        Socio socio1 = new Socio("Pasquale", "Crisafulli", 18, 'M');
+        Socio socio2 = new Socio("Samuele", "Crisafulli", 12, 'M');
 
         circolo.aggiungiSocio(socio1);
         circolo.aggiungiSocio(socio2);
@@ -56,9 +59,9 @@ public class AppTest {
 
     @Test
     public void testCalcolaEtaMediaSesso() {
-        Soci socio1 = new Soci("Pasquale", "Crisafulli", 18, 'M');
-        Soci socio2 = new Soci("Chiara", "Plebani", 17, 'F');
-        Soci socio3 = new Soci("Samuele", "Crisafulli", 12, 'M');
+        Socio socio1 = new Socio("Pasquale", "Crisafulli", 18, 'M');
+        Socio socio2 = new Socio("Chiara", "Plebani", 17, 'F');
+        Socio socio3 = new Socio("Samuele", "Crisafulli", 12, 'M');
 
         circolo.aggiungiSocio(socio1);
         circolo.aggiungiSocio(socio2);
@@ -73,9 +76,9 @@ public class AppTest {
 
     @Test
     public void testCalcolaDistribuzionePercentualeSesso() {
-        Soci socio1 = new Soci("Pasquale", "Crisafulli", 18, 'M');
-        Soci socio2 = new Soci("Chiara", "Plebani", 17, 'F');
-        Soci socio3 = new Soci("Samuele", "Labollita", 18, 'M');
+        Socio socio1 = new Socio("Pasquale", "Crisafulli", 18, 'M');
+        Socio socio2 = new Socio("Chiara", "Plebani", 17, 'F');
+        Socio socio3 = new Socio("Samuele", "Labollita", 18, 'M');
 
         circolo.aggiungiSocio(socio1);
         circolo.aggiungiSocio(socio2);
