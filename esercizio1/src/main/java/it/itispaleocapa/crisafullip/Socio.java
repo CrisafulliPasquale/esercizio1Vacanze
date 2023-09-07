@@ -3,16 +3,16 @@ package it.itispaleocapa.crisafullip;
 
 public class Socio{
 
-    String nome;
-    String cognome;
-    int eta;
-    char sesso;
+    public String nome;
+    public String cognome;
+    public int eta;
+    public char genere;
 
-    public Socio(String nome, String cognome, int eta, char sesso) {
+    public Socio(String nome, String cognome, int eta, char genere) {
         this.nome = nome;
         this.cognome = cognome;
         this.eta = eta;
-        this.sesso = sesso;
+        this.genere = genere;
     }
 
     public String getNome() {
@@ -26,12 +26,20 @@ public class Socio{
     public int getEta() {
         return eta;
     }
-
-    public char getSesso() {
-        return sesso;
+    
+    public void setEta(int eta) {
+        this.eta= eta;
     }
 
     public void incrementaEta() {
         eta++;
+    }
+
+    public char getGenere() {
+        return genere;
+    }
+
+    public void setGenere(char genere) {
+        this.genere = genere;
     }
 }
